@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh‑CN">
+<head>
+    <meta charset="UTF‑8">
+    <title>星际相册 — NASA每日天文图</title>
+    <link rel="stylesheet" href="./xjxc.css">
+</head>
+<body>
+    <div class="header">🚀 星际相册 — NASA每日天文图</div>
+    <div class="search-bar">
+        <input type="date" id="dateInput">
+        <button id="searchBtn">查看该日图片</button>
+        <button id="randomBtn">随机一张</button>
+        <button id="langBtn">语言：中文</button>
+        <button id="showCollectBtn">⭐我的收藏</button>
+    </div>
+
+    <div id="cardBox"></div>
+
+    <!--图片弹窗-->
+    <div id="modal">
+        <button class="close">关闭</button>
+        <img id="modalImg" alt="">
+    </div>
+
+    <!--收藏弹窗-->
+    <div id="collectModal">
+        <div class="collect-wrap">
+            <button class="close">关闭</button>
+            <div id="collectList"></div>
+        </div>
+    </div>
+
+<script src="./xjxc.js"></script>
+</body>
+</html>
