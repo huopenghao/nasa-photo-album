@@ -1,6 +1,10 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#101830;color:#fff;padding:16px;max-width:900px;margin:0 auto}
-.header{text-align:center;margin-bottom:20px;font-size:24px;font-weight:bold}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-size:24px;font-weight:bold;flex-wrap:wrap;gap:10px}
+.user-bar{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:normal}
+.user-name{color:#b0c4ff}
+.logout-btn{background:#e54545;color:#fff;padding:6px 12px;font-size:13px}
+.logout-btn:hover{background:#c93030}
 .search-bar{display:flex;gap:8px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
 #dateInput{padding:8px 10px;font-size:16px;width:180px}
 button{padding:8px 14px;font-size:15px;border:none;border-radius:4px;cursor:pointer;background:#3478f6;color:#fff}

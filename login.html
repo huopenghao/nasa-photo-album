@@ -96,7 +96,7 @@
 </div>
 
 <script>
-const baseUrl = "http://127.0.0.1:8080"; //改成你Java后端地址
+const baseUrl = "http://127.0.0.1:8080"; //Java后端地址
 
 const usernameInp = document.getElementById('username');
 const passwordInp = document.getElementById('password');
@@ -124,8 +124,10 @@ loginBtn.onclick = async ()=>{
         })
         const data = await res.json();
         if(data.code===200){
-            //存储token
+            //存储token和用户信息
             localStorage.setItem("token",data.data.token);
+            if(data.data.username) localStorage.setItem("username",data.data.username);
+            if(data.data.userId) localStorage.setItem("userId",data.data.userId);
             showMsg("登录成功，跳转相册...");
             setTimeout(()=>{
                 location.href="./xjxc.html";

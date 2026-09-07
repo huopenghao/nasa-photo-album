@@ -1,5 +1,34 @@
 console.log("js已加载");
 
+//登录态校验：没有token则跳转登录页
+(function checkLogin(){
+    const token = localStorage.getItem("token");
+    if(!token){
+        alert("请先登录");
+        location.href = "./login.html";
+        return;
+    }
+    //显示当前用户名
+    const username = localStorage.getItem("username") || "用户";
+    const userDom = document.querySelector('#currentUser');
+    if(userDom) userDom.innerText = "👤 " + username;
+})();
+
+//退出登录
+function logout(){
+    if(confirm("确定要退出登录吗？")){
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+        localStorage.removeItem("userId");
+        location.href = "./login.html";
+    }
+}
+
+const logoutBtnDom = document.querySelector('#logoutBtn');
+if(logoutBtnDom){
+    logoutBtnDom.addEventListener('click', logout);
+}
+
 const cardBoxDom = document.querySelector('#cardBox');
 const dateInputDom = document.querySelector('#dateInput');
 const searchBtnDom = document.querySelector('#searchBtn');

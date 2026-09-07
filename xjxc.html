@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="./xjxc.css">
 </head>
 <body>
-    <div class="header">🚀 星际相册 — NASA每日天文图</div>
+    <div class="header">
+        <span>🚀 星际相册 — NASA每日天文图</span>
+        <div class="user-bar">
+            <span id="currentUser" class="user-name"></span>
+            <button id="logoutBtn" class="logout-btn">退出登录</button>
+        </div>
+    </div>
     <div class="search-bar">
         <input type="date" id="dateInput">
         <button id="searchBtn">查看该日图片</button>
